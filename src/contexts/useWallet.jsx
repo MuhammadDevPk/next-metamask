@@ -29,12 +29,12 @@ export const WalletProvider = ({ children }) => {
                     setError("No Account Found")
                 }
             } catch (error) {
-                setError(error)
+                setError(error.message || "An error occurred")
             }
         }
     }
 
-    const connectWallet = async () => {
+    const connect = async () => {
         if (isEthereumExists) {
             try {
                 const accounts = await ethereum.request({ method: 'eth_requestAccounts'})
@@ -44,7 +44,7 @@ export const WalletProvider = ({ children }) => {
                     setError("No Account Found")
                 }
             } catch (error) {
-                setError(error)
+                setError(error.message || "An error occurred")
             }
         } else {
             setError("Please Install Metamask")

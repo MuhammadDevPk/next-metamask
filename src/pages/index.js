@@ -12,7 +12,7 @@ export default function Home() {
         <div>{account}</div>
       )
         : (
-          <button className="bg-blue-500 text-white px-6 py-3 rounded-lg" onClick={() => connect()}></button>
+          <button className="bg-blue-500 text-white px-6 py-3 rounded-lg" onClick={() => connect()}>Connect Wallet</button>
         )}
       {error && <p className="text-red-500">{error}</p>}
     </div>
