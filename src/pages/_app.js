@@ -7,5 +7,7 @@ export default function App({ Component, pageProps }) {
     <WalletProvider>
       <Component {...pageProps} />
     </WalletProvider>
+
+    // /comemnt
   )
 }
